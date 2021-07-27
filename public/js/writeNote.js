@@ -21,6 +21,11 @@ function toggleDropDown(){
     console.log("Toggle dropdown");
     document.querySelector('.dropdown').classList.toggle("is-active");
 }
+function getTimestamp(){
+    var epochTime = Math.floor(new Date().getTime()/1000.0);
+    var humanTime = new Date(epochTime*1000);
+    return humanTime.toLocaleString();
+}
 const submitNote = () => {
     const note = document.querySelector("#noteText").value;
     const title = document.querySelector("#noteTitle").value;
@@ -29,7 +34,7 @@ const submitNote = () => {
         {
             title: title,
             note: note,
-            timestamp: Date.now(),
+            timestamp: getTimestamp(),
             labels : labels
 
         }
