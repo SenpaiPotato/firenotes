@@ -13,7 +13,8 @@ const signIn = () => {
             const user = result.user;
 
             console.log(user.uid);
-            window.location = 'writeNote.html'; //change to welcomepage.html
+            userId = user.uid;
+            window.location = 'welcomepage.html'; 
         })
         .catch(error => {
             //Something bad happened :(
@@ -21,3 +22,4 @@ const signIn = () => {
         });
 
 };
+

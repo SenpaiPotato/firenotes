@@ -7,7 +7,7 @@ window.onload = () => {
                 console.log(`Logged in as: ${user.displayName}`);
                 googleUser = user;
                 userId = googleUser.uid;
-
+                //document.querySelector('#welcomeMessage').innerHTML = ` Welcome to 🔥Fire Notes📝, ${user.displayName} !`
             } else {
                 window.location = 'index.html';
             }
